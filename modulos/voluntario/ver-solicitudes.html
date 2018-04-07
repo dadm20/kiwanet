@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Voluntario - Kiwanet.co</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/dataTables.bootstrap4.min.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<div class="logo">
+						<a href="index.html"><img src="../../img/logo.png"></a>
+					</div>
+				</div>
+				<div class="col-10">
+					<div class="links">
+						<p class="text-right">
+							<a>Mi cuenta</a> | <a href="../../index.html">Salir</a>
+						</p>
+					</div>
+					<div class="usuario d-none d-md-block d-lg-block">
+						<div class="row">
+							<div class="col-11">
+								<p class="nombre text-right">
+									<span class="nombre">Daniel Díaz</span>
+									<br>
+									<span class="cargo">Voluntario</span>
+								</p>
+							</div>
+							<div class="col-1">
+								<img src="../../img/usuarios/daniel_diaz.jpg" alt="" class="imagenUsuario">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item" aria-current="page"><a href="index.html">inicio</a></li>
+				<li class="breadcrumb-item" aria-current="page"><a href="index.html">voluntario</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Ver solicitudes</li>
+			</ol>
+		</nav>
+		<div class="row">
+			<div class="col-12 col-md-4 col-lg-3">
+				<a href="solicitar_material.html" class="btn btn-blue btn-menu-top"><span>Solicitar Material</span></a>
+				<a href="#" class="btn btn-orange btn-menu-bottom"><span>Ver solicitudes</span></a>
+			</div>
+			<div class="col-12 col-md-8 col-lg-9">
+				<table id="example" class="table table-striped table-bordered" style="width:100%">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Posición</th>
+							<th>Oficina</th>
+							<th>Edad</th>
+							<th>Fecha inicio</th>
+							<th>Salario</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>System Architect</td>
+							<td>Edinburgh</td>
+							<td>61</td>
+							<td>2011/04/25</td>
+							<td>$320,800</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>63</td>
+							<td>2011/07/25</td>
+							<td>$170,750</td>
+						</tr>
+						<tr>
+							<td>Ashton Cox</td>
+							<td>Junior Technical Author</td>
+							<td>San Francisco</td>
+							<td>66</td>
+							<td>2009/01/12</td>
+							<td>$86,000</td>
+						</tr>
+						<tr>
+							<td>Cedric Kelly</td>
+							<td>Senior Javascript Developer</td>
+							<td>Edinburgh</td>
+							<td>22</td>
+							<td>2012/03/29</td>
+							<td>$433,060</td>
+						</tr>
+						<tr>
+							<td>Airi Satou</td>
+							<td>Accountant</td>
+							<td>Tokyo</td>
+							<td>33</td>
+							<td>2008/11/28</td>
+							<td>$162,700</td>
+						</tr>
+						<tr>
+							<td>Brielle Williamson</td>
+							<td>Integration Specialist</td>
+							<td>New York</td>
+							<td>61</td>
+							<td>2012/12/02</td>
+							<td>$372,000</td>
+						</tr>
+						<tr>
+							<td>Herrod Chandler</td>
+							<td>Sales Assistant</td>
+							<td>San Francisco</td>
+							<td>59</td>
+							<td>2012/08/06</td>
+							<td>$137,500</td>
+						</tr>
+						<tr>
+							<td>Rhona Davidson</td>
+							<td>Integration Specialist</td>
+							<td>Tokyo</td>
+							<td>55</td>
+							<td>2010/10/14</td>
+							<td>$327,900</td>
+						</tr>
+						<tr>
+							<td>Colleen Hurst</td>
+							<td>Javascript Developer</td>
+							<td>San Francisco</td>
+							<td>39</td>
+							<td>2009/09/15</td>
+							<td>$205,500</td>
+						</tr>
+						<tr>
+							<td>Sonya Frost</td>
+							<td>Software Engineer</td>
+							<td>Edinburgh</td>
+							<td>23</td>
+							<td>2008/12/13</td>
+							<td>$103,600</td>
+						</tr>
+						<tr>
+							<td>Jena Gaines</td>
+							<td>Office Manager</td>
+							<td>London</td>
+							<td>30</td>
+							<td>2008/12/19</td>
+							<td>$90,560</td>
+						</tr>
+						<tr>
+							<td>Quinn Flynn</td>
+							<td>Support Lead</td>
+							<td>Edinburgh</td>
+							<td>22</td>
+							<td>2013/03/03</td>
+							<td>$342,000</td>
+						</tr>
+						<tr>
+							<td>Charde Marshall</td>
+							<td>Regional Director</td>
+							<td>San Francisco</td>
+							<td>36</td>
+							<td>2008/10/16</td>
+							<td>$470,600</td>
+						</tr>
+						<tr>
+							<td>Haley Kennedy</td>
+							<td>Senior Marketing Designer</td>
+							<td>London</td>
+							<td>43</td>
+							<td>2012/12/18</td>
+							<td>$313,500</td>
+						</tr>
+						<tr>
+							<td>Tatyana Fitzpatrick</td>
+							<td>Regional Director</td>
+							<td>London</td>
+							<td>19</td>
+							<td>2010/03/17</td>
+							<td>$385,750</td>
+						</tr>
+						<tr>
+							<td>Michael Silva</td>
+							<td>Marketing Designer</td>
+							<td>London</td>
+							<td>66</td>
+							<td>2012/11/27</td>
+							<td>$198,500</td>
+						</tr>
+						<tr>
+							<td>Jennifer Chang</td>
+							<td>Regional Director</td>
+							<td>Singapore</td>
+							<td>28</td>
+							<td>2010/11/14</td>
+							<td>$357,650</td>
+						</tr>
+						<tr>
+							<td>Brenden Wagner</td>
+							<td>Software Engineer</td>
+							<td>San Francisco</td>
+							<td>28</td>
+							<td>2011/06/07</td>
+							<td>$206,850</td>
+						</tr>
+						<tr>
+							<td>Fiona Green</td>
+							<td>Chief Operating Officer (COO)</td>
+							<td>San Francisco</td>
+							<td>48</td>
+							<td>2010/03/11</td>
+							<td>$850,000</td>
+						</tr>
+
+					</tbody>
+<!--
+					<tfoot>
+						<tr>
+							<th>Name</th>
+							<th>Position</th>
+							<th>Office</th>
+							<th>Age</th>
+							<th>Start date</th>
+							<th>Salary</th>
+						</tr>
+					</tfoot>
+				-->
+				</table>
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="model-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+								<button type="button" class="close" data-dismiss="modal" aria-label="close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="alert alert-success alert-dismissible fade show" role="alert">
+									Se ha ha enviado la <strong>solicitud correctamente</strong>.
+								</div>
+							</div>
+							<div class="modal-confirmacion">
+								<a href="index.html" class="btn btn-success">Cerrar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container d-none d-lg-block infoFooter">
+			<div class="row full">
+				<div class="col-2 vertical-center">
+					<p>@2018 Sena - ADSI</p>
+				</div>
+				<div class="col-8 vertical-center align-center">
+					<p>Desarrollador por GAES Kiwanet <span class="naranja">+</span> Phone 316.444.6531 <span class="naranja">+</span> soporte@kiwanet.com</p>
+				</div>
+				<div class="col-2">
+					<p class="text-right"><a class="facebook"></a> <a class="twitter"></a> <a class="instagram"></a></p>
+				</div>
+			</div>
+		</div>
+		<div class="container infoFooter d-block d-sm-block d-lg-none">
+			<div class="row">
+				<div class="col-12 align-center">
+					<span>@2018 Sena - ADSI</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<span>Desarrollador por GAES Kiwanet <span class="naranja">+</span> Phone 316.444.6531 <span class="naranja">+</span> soporte@kiwanet.com</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<span><a class="facebook"></a> <a class="twitter"></a> <a class="instagram"></a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="../../js/jquery-3.3.1.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/funciones.js"></script>
+	<script src="../../js/jquery.dataTables.min.js"></script>
+	<script src="../../js/dataTables.bootstrap4.min.js"></script>
+	<script src="../../js/dataTables.buttons.min.js"></script>
+	<script src="../../js/buttons.bootstrap4.min.js"></script>
+	<script src="../../js/jszip.min.js"></script>
+	<script src="../../js/pdfmake.min.js"></script>
+	<script src="../../js/vfs_fonts.js"></script>
+	<script src="../../js/buttons.html5.min.js"></script>
+	<script src="../../js/buttons.print.min.js"></script>
+	<script src="../../js/buttons.colVis.min.js"></script>
+	<script>
+		$(document).ready(function() {
+		    var table = $('#example').DataTable( {
+		        lengthChange: false,
+		        buttons: [ 'copy', 'excel', 'pdf', 'colvis' ]
+		    } );
+		 
+		    table.buttons().container()
+		        .appendTo( '#example_wrapper .col-md-6:eq(0)' );
+		} );
+	</script>
+</body>
+
+</html>

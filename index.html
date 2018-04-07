@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Inicio - Kiwanet.co</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/funciones.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<div class="logo">
+						<a href="index.html"><img src="img/logo.png"></a>
+					</div>
+				</div>
+				<div class="col-7"></div>
+				<div class="col-3">
+					<div class="links">
+						<p class="text-right"></p>
+					</div>
+					<div class="usuario d-none d-lg-block">
+						<p class="nombre text-right">
+							Bienvenido
+						</p>
+						<img src="../../img/usuarios/daniel_diaz.jpg" alt="" class="imagenUsuario">
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item active" aria-current="page">Inicio</li>
+			</ol>
+		</nav>
+		<div class="row justify-content-md-center">
+			<div class="col-12 col-md-8 col-lg-4">
+				<div class="login">
+					<form onsubmit="return validar_usuario();">
+						<div class="alert alert-danger alert-dismissible fade show ocultar" id="alerta" role="alert">
+							Correo o contraseña invalidos.
+						</div>
+						<div class="form-group">
+							<label>Correo electrónico:</label>
+							<input id="inputEmail" class="form-control" required="true" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" autofocus="" type="email">
+						</div>
+						<div class="form-group">
+							<label>Contraseña:</label>
+							<input id="inputPassword" class="form-control" required="true" type="password">
+						</div>
+						<div class="form-group">
+							<div class="row submit-form">
+								<div class="col-lg-6 col-12">
+									<button class="btn btn-block btn-orange inicio" type="submit">Iniciar</button>
+								</div>
+								<div class="col-lg-6 col-12">
+									<a href="registro.html" class="btn btn-block btn-blue inicio" type="submit">Registrarse</a>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<a href="recordar.html" class="">Recordar contraseña</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container d-none d-lg-block infoFooter">
+			<div class="row full">
+				<div class="col-2 vertical-center">
+					<p>@2018 Sena - ADSI</p>
+				</div>
+				<div class="col-8 vertical-center align-center">
+					<p>Desarrollador por GAES Kiwanet <span class="naranja">+</span> Phone 316.444.6531 <span class="naranja">+</span> soporte@kiwanet.com</p>
+				</div>
+				<div class="col-2">
+					<p class="text-right"><a class="facebook"></a> <a class="twitter"></a> <a class="instagram"></a></p>
+				</div>
+			</div>
+		</div>
+		<div class="container infoFooter d-block d-sm-block d-lg-none">
+			<div class="row">
+				<div class="col-12 align-center">
+					<span>@2018 Sena - ADSI</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<span>Desarrollador por GAES Kiwanet <span class="naranja">+</span> Phone 316.444.6531 <span class="naranja">+</span> soporte@kiwanet.com</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<span><a class="facebook"></a> <a class="twitter"></a> <a class="instagram"></a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Registrarse - Kiwanet.co</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<div class="logo">
+						<a href="index.html"><img src="img/logo.png"></a>
+					</div>
+				</div>
+				<div class="col-2"></div>
+				<div class="col-8">
+					<div class="links">
+						<p class="text-right"></p>
+					</div>
+					<div class="usuario d-none d-lg-block">
+						<p class="nombre text-right">
+							Registrarse
+						</p>
+						<img src="../../img/usuarios/daniel_diaz.jpg" alt="" class="imagenUsuario">
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">Inicio</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Registrarse</li>
+			</ol>
+		</nav>
+		<div class="row">
+			<div class="col-lg-3"></div>
+			<div class="col-lg-6 col-12">
+				<form onsubmit="return registrar_usuario();">
+					<div class="form-group">
+						<label>Tipo Documento:</label>
+						<select class="form-control" required>
+							<option value="">Seleccione...</option>
+							<option value="privada">CC</option>
+							<option value="publica">NIT</option>
+							<option value="publica">TI</option>
+							<option value="publica">Pasaporte</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Número documento:</label>
+						<input type="text" class="form-control" pattern="[0-9]{7,15}" required="true">
+					</div>
+					<div class="form-group">
+						<label>Nombres:</label>
+						<input type="text" class="form-control" pattern="[A-Z a-z]{5,20}" required="true">
+					</div>
+					<div class="form-group">
+						<label>Apellidos:</label>
+						<input type="v" class="form-control" pattern="[A-Z a-z]{5,20}" required="true">
+					</div>
+					<div class="form-group">
+						<label>Correo electrónico:</label>
+						<input type="email" class="form-control" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required="true" >
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-6">
+								<label>Contraseña</label>
+								<input type="password" class="form-control" id="pass_1" onchange="validar_contrasena();">
+							</div>
+							<div class="col-6">
+								<label>Confirmar contraseña</label>
+								<input type="password" class="form-control" id="pass_2" onchange="validar_contrasena();">
+							</div>
+						</div>
+						<div id="confirmacion"></div>
+					</div>
+					<div class="form-group">
+						<div class="row submit-form">
+							<div class="col-lg-6 col-12">
+								<!-- <button class="btn btn-block btn-orange inicio" data-toggle="modal" data-target="#exampleModalCenter">Registrarse</button>-->
+									<button class="btn btn-block btn-orange inicio">Registrarse</button>
+							</div>
+							<div class="col-lg-6 col-12">
+								<a href="index.html" class="btn btn-block btn-blue inicio" type="submit">Regresar</a>
+							</div>
+						</div>
+					</div>
+				</form>
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="model-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+								<button type="button" class="close" data-dismiss="modal" aria-label="close">
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="alert alert-success alert-dismissible fade show" role="alert">
+									Se ha registrado correctamente <strong>Bienvenido</strong>.
+								</div>
+							</div>
+							<div class="modal-confirmacion">
+								<a href="index.html" class="btn btn-success">Cerrar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3"></div>
+		</div>
+	</div>
+	<footer>
+		<div class="container d-none d-lg-block infoFooter">
+			<div class="row full">
+				<div class="col-2 vertical-center">
+					<p>@2018 Sena - ADSI</p>
+				</div>
+				<div class="col-8 vertical-center align-center">
+					<p>Desarrollador por GAES Kiwanet <span class="naranja">+</span> Phone 316.444.6531 <span class="naranja">+</span> soporte@kiwanet.com</p>
+				</div>
+				<div class="col-2">
+					<p class="text-right"><a class="facebook"></a> <a class="twitter"></a> <a class="instagram"></a></p>
+				</div>
+			</div>
+		</div>
+		<div class="container infoFooter d-block d-sm-block d-lg-none">
+			<div class="row">
+				<div class="col-12 align-center">
+					<span>@2018 Sena - ADSI</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<span>Desarrollador por GAES Kiwanet <span class="naranja">+</span> Phone 316.444.6531 <span class="naranja">+</span> soporte@kiwanet.com</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<span><a class="facebook"></a> <a class="twitter"></a> <a class="instagram"></a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/funciones.js"></script>
+</body>
+
+</html>
