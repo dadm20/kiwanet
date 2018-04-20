@@ -63,13 +63,11 @@ a:hover {
 	font-size: 35px;
 	line-height: 0.6;
 	font-weight: bold;
-	margin-right: 10px;
 }
 
 .cargo {
 	font-size: 18px;
 	font-weight: normal;
-	margin-right: 10px;
 }
 
 .align-center {
@@ -322,7 +320,7 @@ footer .instagram:hover {
 .imagenUsuario {
 	float: right;
 	height: 50px;
-	width: 35px;
+	width: 40px;
 	border-radius: 50%;
 }
 
@@ -348,13 +346,16 @@ footer .instagram:hover {
 }
 
 
-/* Validar campor formulario */
+/* Validar campos formulario */
+.error {
+    background: #fff url("../img/error.png") no-repeat 98%  center;
+}
+
 label.error {
+    background: none;
 	vertical-align: middle;
-	background: url(../img/error.png) no-repeat;
-	background-position: 0px 4px;
-	padding-left: 20px;
-	margin: 3px 5px;
+	padding-left: 5px;
+	margin: 3px 0px;
 	color: #ff0000;
 	font-size: 14px;
 }
