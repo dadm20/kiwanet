@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Historico - Kiwanet.co</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<script src="../../js/jquery-3.3.1.min.js"></script>
+	<script src="../../js/jquery.validate.js"></script>
+	<script src="../../js/funciones.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<div class="logo">
+						<a href="index.html"><img src="../../img/logo.png"></a>
+					</div>
+				</div>
+				<div class="col-10">
+					<div class="links">
+						<p class="text-right">
+							<a>Mi cuenta</a> | <a href="../../index.html">Salir</a>
+						</p>
+					</div>
+					<div class="usuario d-none d-md-block d-lg-block">
+						<div class="row">
+							<div class="col-11">
+								<p class="nombre text-right">
+									<span class="nombre">Julian Forero</span>
+									<br>
+									<span class="cargo">Ejecutor proyecto</span>
+								</p>
+							</div>
+							<div class="col-1">
+								<img src="../../img/usuarios/julian_forero.jpg" alt="" class="imagenUsuario">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container" id="c_b">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item" aria-current="page">Inicio</li>
+				<li class="breadcrumb-item" aria-current="page"><a href="index.html">Ejecutor</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Historial de proyectos</li>
+			</ol>
+		</nav>
+		<div class="row">
+			<div class="col-12 col-md-4 col-lg-3">
+				<a href="proyecto.html" class="btn btn-blue btn-menu-top"><span>Crear proyecto</span></a>
+				<a href="actualizar.html" class="btn btn-blue btn-menu-middle"><span>Actualizar proyecto</span></a>
+				<a href="historico.html" class="btn btn-orange btn-menu-bottom"><span>Historial proyectos</span></a>
+			</div>
+			<div class="col-12 col-md-8 col-lg-9">
+				<div class="row">
+					<div class="col-12">
+						<div class="alert alert-danger alert-dismissible fade show ocultar" id="alerta" role="alert">
+							La fecha <b>Hasta</b> no puede ser menor que la fecha <b>Desde</b>
+						</div>
+						<form id="reporte_historico">
+							<!-- Inicia para dos columnas onsubmit="return grafica();" id="form_grafica"-->
+							<div class="form-group">
+								<label>Proyecto:</label>
+								<select class="form-control" name="proyecto">
+									<option value="">Seleccione...</option>
+									<option value="privada">+ Panelitas</option>
+									<option value="publica">Abuelitos</option>
+									<option value="publica">Niños Ciudad Bolivar</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-lg-6 col-md-12 col-12">
+										<label>Fecha inicial:</label>
+										<input type="date" class="form-control" id="fecha_inicio" name="fecha_inicio">
+									</div>
+									<div class="col-lg-6 col-md-12 col-12">
+										<label>Fecha final:</label>
+										<input type="date" class="form-control" id="fecha_fin" name="fecha_fin">
+									</div>
+								</div>
+							</div>
+							<!-- Termina para dos columnas -->
+							<div class="form-group">
+								<div class="row submit-form justify-content-md-center">
+									<div class="col-lg-4 col-md-4 col-12">
+										<button class="btn btn-block btn-orange inicio">Generar histórico</button>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!-- Termina form -->
+						<div id="chartContainer" class="ocultar"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container d-none d-lg-block infoFooter">
+			<div class="row full">
+				<div class="col-2 vertical-center">
+					<p>@2018 Sena - ADSI</p>
+				</div>
+				<div class="col-8 vertical-center align-center">
+					<p>Desarrollador por GAES Kiwanet <span class="naranja">+</span> Phone 316.444.6531 <span class="naranja">+</span> soporte@kiwanet.com</p>
+				</div>
+				<div class="col-2">
+					<p class="text-right"><a class="facebook"></a> <a class="twitter"></a> <a class="instagram"></a></p>
+				</div>
+			</div>
+		</div>
+		<div class="container infoFooter d-block d-sm-block d-lg-none">
+			<div class="row">
+				<div class="col-12 align-center">
+					<span>@2018 Sena - ADSI</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<span>Desarrollador por GAES Kiwanet <span class="naranja">+</span> Phone 316.444.6531 <span class="naranja">+</span> soporte@kiwanet.com</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<span><a class="facebook"></a> <a class="twitter"></a> <a class="instagram"></a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/Chart.js"></script>
+	<script src="../../js/canvasjs.min.js"></script>
+	
+</body>
+
+</html>

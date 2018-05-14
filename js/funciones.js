@@ -132,18 +132,465 @@
                 } else {
                     $("#chartContainer").removeClass("ocultar");
                     $("#reporte_consumo").addClass("ocultar");
-                    $("#c_b").css( "height", "450px" );
+                    $("#c_b").css("height", "450px");
+                    $("#alerta").addClass("ocultar");
+                }
+            },
+        });
+
+        /*
+         ************* Validaciones del Ejecutor de proyecto *************
+         */
+
+        // validate del formulario de proyecto.html.html
+
+        var validator = $("#crear_proyecto").validate({
+            rules: {
+                proyecto: {
+                    required: true,
+                },
+                nombre: {
+                    required: true,
+                },
+                direccion: {
+                    required: true,
+                },
+                ciudad: {
+                    required: true,
+                },
+                presupuesto: {
+                    required: true,
+                },
+                descripcion: {
+                    required: true,
+                },
+
+
+            },
+            messages: {
+                proyecto: {
+                    required: "Seleccione un proyecto",
+                },
+                nombre: {
+                    required: "Ingrese un nombre para el proyecto",
+                },
+                direccion: {
+                    required: "Ingrese la dirección del proyecto",
+                },
+                ciudad: {
+                    required: "Ingrese la ciudad del proyesto",
+                },
+                presupuesto: {
+                    required: "Ingrese el presupuesto si lo tiene",
+                },
+                descripcion: {
+                    required: "Ingrese una descripción al proyesto",
+                },
+
+            },
+
+            submitHandler: function() {
+                $("#alerta").removeClass("ocultar");
+                $("#crear_proyecto")[0].reset();
+            },
+        }); 
+    
+        // validate del formulario de actualizar.html
+
+        var validator = $("#actualizar_proyecto").validate({
+            rules: {
+                proyecto: {
+                    required: true,
+                },
+                descripcion: {
+                    required: true,
+                },
+               
+
+            },
+            messages: {
+                proyecto: {
+                    required: "Seleccionar proyecto",
+                },
+                descripcion: {
+                    required: "Ingresar una descripción",
+                },
+                
+
+            },
+
+            submitHandler: function() {
+                $("#alerta").removeClass("ocultar");
+                $("#actualizar_proyecto")[0].reset();
+            },
+        });
+
+
+// validate del formulario de historico.html
+
+        var validator = $("#reporte_historico").validate({
+            rules: {
+                proyecto: {
+                    required: true,
+                },
+                fecha_inicio: {
+                    required: true,
+                    date: true
+                },
+                fecha_fin: {
+                    required: true,
+                    date: true
+                },
+            },
+            messages: {
+                proyecto: {
+                    required: "Seleccione un proyecto",
+                },
+                fecha_inicio: {
+                    required: "Ingrese una fecha",
+                    date: "Ingrese una fecha valida"
+                },
+                fecha_fin: {
+                    required: "Ingrese una fecha",
+                    date: "Ingrese una fecha valida"
+                },
+                
+
+            },
+
+            submitHandler: function() {
+
+                fecha_inicio = $("#fecha_inicio").val();
+                fecha_fin = $("#fecha_fin").val();
+
+                if (fecha_fin < fecha_inicio) {
+                    $("#alerta").removeClass("ocultar");
+                } else {
+                    $("#chartContainer").removeClass("ocultar");
+                    $("#reporte_historico").addClass("ocultar");
+                    $("#c_b").css("height", "450px");
                     $("#alerta").addClass("ocultar");
                 }
             },
         });
 
 
+        // validate del formulario de proyecto.html.html
+
+        var validator = $("#asignar_voluntario").validate({
+            rules: {
+                proyecto: {
+                    required: true,
+                },
+                voluntario: {
+                    required: true,
+                },
+                fecha_inicio: {
+                    required: true,
+                    date: true
+                },
+                fecha_fin: {
+                    required: true,
+                    date: true
+                },                
+                descripcion: {
+                    required: true,
+                },
+
+
+            },
+            messages: {
+                proyecto: {
+                    required: "Seleccione un proyecto",
+                },
+                voluntario: {
+                    required: "Seleccione un voluntario",
+                },
+                fecha_inicio: {
+                    required: "Ingrese una fecha",
+                    date: "Ingrese una fecha valida"
+                },
+                fecha_fin: {
+                    required: "Ingrese una fecha",
+                    date: "Ingrese una fecha valida"
+                },                
+                descripcion: {
+                    required: "Ingresar descripción",
+                },
+
+            },
+
+            submitHandler: function() {
+                   
+
+                $("#alerta").removeClass("ocultar");
+                $("#asignar_voluntario")[0].reset();
+
+                
+            },
+        });
+
+
+
+// validate del formulario de proyecto.html.html
+
+        var validator = $("#crear_voluntario").validate({
+            rules: {
+                tipo_doc: {
+                    required: true,
+                },
+                identificacion: {
+                    required: true,
+                },
+                nombre: {
+                    required: true,
+                },
+                apellido: {
+                    required: true,
+                },
+                sexo: {
+                    required: true,
+                },
+                edad: {
+                    required: true,
+                },
+                perfil: {
+                    required: true,
+                },
+                descripcion: {
+                    required: true,
+                },
+                ciudad: {
+                    required: true,
+                },
+
+
+            },
+            messages: {
+                tipo_doc: {
+                    required: "Seleccionar tipo",
+                },
+                identificacion: {
+                    required: "Ingresar numero de identificación",
+                },
+                nombre: {
+                    required: "Ingresar nombre",
+                },
+                apellido: {
+                    required: "Ingresar apellido ",
+                },
+                sexo: {
+                    required: "Seleccionar",
+                },
+                edad: {
+                    required: "Ingresar edad",
+                },
+                perfil: {
+                    required: "Seleccionar",
+                },
+                descripcion: {
+                    required: "Ingresar descripción",
+                },
+                ciudad: {
+                    required: "Ingresar ciudad",
+                },
+
+            },
+
+            submitHandler: function() {
+                $("#alerta").removeClass("ocultar");
+                $("#crear_voluntario")[0].reset();
+            },
+        }); 
+
+
+// validate del formulario de proyecto.html.html
+
+        var validator = $("#dato_financiero").validate({
+            rules: {
+                tipo: {
+                    required: true,
+                },
+                valor: {
+                    required: true,
+                },
+
+                proyecto: {
+                    required: true,
+                },
+                fecha: {
+                    required: true,
+                    date: true
+                },
+                descripcion: {
+                    required: true,
+                },
+                
+
+
+            },
+            messages: {
+                tipo: {
+                    required: "Seleccionar tipo de egreso",
+                },
+                valor: {
+                    required: "Ingresar valor",
+                },
+                proyecto: {
+                    required: "Seleccionar",
+                },
+                fecha: {
+                    required: "Ingrese una fecha",
+                    date: "Ingrese una fecha valida"
+                },
+                                
+                descripcion: {
+                    required: "Ingresar descripción",
+                },
+
+            },
+
+            submitHandler: function() {
+                   
+
+                $("#alerta").removeClass("ocultar");
+                $("#dato_financiero")[0].reset();
+
+                
+            },
+        });
+
+
+// validate del formulario de proyecto.html.html
+
+        var validator = $("#actualizar_registro").validate({
+            rules: {
+                tipo: {
+                    required: true,
+                },
+                valor: {
+                    required: true,
+                },
+
+                proyecto: {
+                    required: true,
+                },
+                fecha: {
+                    required: true,
+                    date: true
+                },
+                motivo: {
+                    required: true,
+                },
+                
+
+
+            },
+            messages: {
+                tipo: {
+                    required: "Seleccionar tipo de egreso",
+                },
+                valor: {
+                    required: "Ingresar valor",
+                },
+                proyecto: {
+                    required: "Seleccionar",
+                },
+                fecha: {
+                    required: "Ingrese una fecha",
+                    
+                },
+                                
+                motivo: {
+                    required: "Ingrese una descripción",
+                },
+
+            },
+
+            submitHandler: function() {
+                   
+
+                $("#alerta").removeClass("ocultar");
+                $("#actualizar_registro")[0].reset();
+
+                
+            },
+        });
+
+
+// validate del formulario de proyecto.html.html
+
+        var validator = $("#presupuesto").validate({
+            rules: {
+                proyecto: {
+                    required: true,
+                },
+
+
+            },
+            messages: {
+                proyecto: {
+                    required: "Seleccionar proyecto",
+                },
+
+            },
+
+            submitHandler: function() {
+                   
+
+                $("#alerta").removeClass("ocultar");
+                $("#presupuesto")[0].reset();
+
+                
+            },
+        });
+
+        // validate del formulario de proyecto.html.html
+
+        var validator = $("#ampliar_presu").validate({
+            rules: {
+                proyecto: {
+                    required: true,
+                },
+                sol_valor: {
+                    required: true,
+                },
+                descripcion: {
+                    required: true,
+                },
+
+
+            },
+            messages: {
+                proyecto: {
+                    required: "Seleccionar proyecto",
+                },
+                sol_valor: {
+                    required: "Ingresar valor",
+                },
+                descripcion: {
+                    required: "Ingresar descripción",
+                },
+
+            },
+
+            submitHandler: function() {
+                   
+
+                $("#alerta").removeClass("ocultar");
+                $("#ampliar_presu")[0].reset();
+
+                
+            },
+        });
+
+
+
+
+
+
+
     }); //cierra el jquery linea 1
-
-
-
-
 
 
 

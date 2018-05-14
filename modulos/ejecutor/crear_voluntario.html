@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Crear voluntario - Kiwanet.co</title>
+	<!-- CSS -->
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<script src="../../js/jquery-3.3.1.min.js"></script>
+	<script src="../../js/jquery.validate.js"></script>
+	<script src="../../js/funciones.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+					<div class="logo">
+						<a href="index.html"><img src="../../img/logo.png"></a>
+					</div>
+				</div>
+				<div class="col-10">
+					<div class="links">
+						<p class="text-right">
+							<a>Mi cuenta</a> | <a href="../../index.html">Salir</a>
+						</p>
+					</div>
+					<div class="usuario d-none d-md-block d-lg-block">
+						<div class="row">
+							<div class="col-11">
+								<p class="nombre text-right">
+									<span class="nombre">Julian Forero</span>
+									<br>
+									<span class="cargo">Ejecutor proyecto</span>
+								</p>
+							</div>
+							<div class="col-1">
+								<img src="../../img/usuarios/julian_forero.jpg" alt="" class="imagenUsuario">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item" aria-current="page">Inicio</li>
+				<li class="breadcrumb-item" aria-current="page"><a href="index.html">Ejecutor</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Crear voluntario</li>
+			</ol>
+		</nav>
+		<div class="row">
+			<div class="col-12 col-md-4 col-lg-3">
+				<a href="asignar_voluntario.html" class="btn btn-blue btn-menu-top"><span>Asignar voluntario</span></a>
+				<a href="crear_voluntario.html" class="btn btn-orange btn-menu-bottom"><span>Crear voluntario</span></a>
+			</div>
+			<div class="col-12 col-md-8 col-lg-9">
+				<!-- Inicia comfirmación -->
+				<div class="alert alert-success alert-dismissible fade show ocultar" id="alerta" role="alert">
+					Registro guardado correctamente.
+				</div>
+				<!-- Termina comfirmación -->
+				<form id="crear_voluntario">
+					<div class="form-group">
+						<div class="row">
+							<div class="col-lg-6 col-md-12 col-12">
+								<div class="form-group">
+									<label>Tipo de documento:</label>
+									<select class="form-control" name="tipo_doc">
+										<option value="">Seleccione...</option>
+										<option value="privada">Cedula de ciudadanía</option>
+										<option value="privada">Cedula de Extrangeria</option>
+										<option value="privada">Tarjeta de identidad</option>
+										<option value="privada">Pasaporte</option>
+										<option value="privada">Identificación Extrangera</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Identificación:</label>
+									<input id="identificacion" name="identificacion" class="form-control" type="text" placeholder="">
+								</div>
+								<div class="form-group">
+									<label>Nombre:</label>
+									<input id="nombre" name="nombre" class="form-control" type="text" placeholder="">
+								</div>
+								<div class="form-group">
+									<label>Apellido:</label>
+									<input id="apellido" name="apellido" class="form-control" type="text" placeholder="">
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-3 col-lg-6">
+										<label for="sexo">Sexo</label>
+										<select id="sexo" name="sexo" class="form-control">
+											<option selected>Seleccionar...</option>
+											<option>M</option>
+											<option>F</option>
+										</select>
+									</div>
+									<div class="form-group col-md-3 col-lg-6">
+										<label for="edad">Edad</label>
+										<input type="text" class="form-control" name="edad" id="edad">
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-12 col-12">
+								<div class="form-group">
+									<label>Perfil:</label>
+									<select class="form-control" name="perfil">
+										<option value="">Seleccione...</option>
+										<option value="privada">Voluntario</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Numero de telefono:</label>
+									<input id="telefono" name="telefono" class="form-control " type="text" placeholder="">
+								</div>
+								<div class="form-group">
+									<label>Correo:</label>
+									<input id="correo" name="correo" class="form-control" type="text" placeholder="">
+								</div>
+								<div class="form-group">
+									<label>Ciudad:</label>
+									<input id="ciudad" name="ciudad" class="form-control" type="text" placeholder="">
+								</div>
+								<div class="form-group">
+									<label>Fecha:</label>
+									<input type="" class="form-control" placeholder="29/04/2018">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Observación:</label>
+						<textarea type="text" class="form-control" name="descripcion"></textarea>
+					</div>
+					<div class="form-group">
+						<div class="row submit-form justify-content-md-center">
+							<div class="col-lg-4 col-md-4 col-12">
+								<button class="btn btn-block btn-orange inicio" data-toggle="modal">Crear voluntario</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- Modal -->
+		</div>
+	</div>
+	<footer>
+		<div class="container d-none d-lg-block infoFooter">
+			<div class="row full">
+				<div class="col-2 vertical-center">
+					<p>@2018 Sena - ADSI</p>
+				</div>
+				<div class="col-8 vertical-center align-center">
+					<p>Desarrollador por GAES Kiwanet <span class="naranja">+</span> Phone 316.444.6531 <span class="naranja">+</span> soporte@kiwanet.com</p>
+				</div>
+				<div class="col-2">
+					<p class="text-right"><a class="facebook"></a> <a class="twitter"></a> <a class="instagram"></a></p>
+				</div>
+			</div>
+		</div>
+		<div class="container infoFooter d-block d-sm-block d-lg-none">
+			<div class="row">
+				<div class="col-12 align-center">
+					<span>@2018 Sena - ADSI</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<span>Desarrollador por GAES Kiwanet <span class="naranja">+</span> Phone 316.444.6531 <span class="naranja">+</span> soporte@kiwanet.com</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 align-center">
+					<span><a class="facebook"></a> <a class="twitter"></a> <a class="instagram"></a></span>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

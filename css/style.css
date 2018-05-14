@@ -63,11 +63,13 @@ a:hover {
 	font-size: 35px;
 	line-height: 0.6;
 	font-weight: bold;
+	margin-right: 10px;
 }
 
 .cargo {
 	font-size: 18px;
 	font-weight: normal;
+	margin-right: 10px;
 }
 
 .align-center {
@@ -185,6 +187,7 @@ footer .instagram:hover {
 .submit-form {
 	margin-top: 30px;
 }
+
 
 .ocultar {
 	display: none;
@@ -316,14 +319,112 @@ footer .instagram:hover {
 			transition: .3s;
 		}
 
+	.proyecto {
+		width: 250px;
+		height: 250px;
+		display:inline-block;
+		margin: 20px;
+	}
+
+		.imgProyecto {
+	background-image: url(../img/botones/proyecto2.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 100%;
+	height: 174px;
+	float: left;
+	text-decoration: none;
+	font-size: 18px;
+	color: #008AC9;
+}
+
+		.imgProyecto:hover {
+	background-image: url(../img/botones/proyecto2_on.png);
+	color: #F66505;
+	transition: .3s;
+}
+
+	.voluntario {
+		width: 250px;
+		height: 250px;
+		display:inline-block;
+		margin: 20px;
+	}
+
+		.imgVoluntario {
+	background-image: url(../img/botones/voluntario_off.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 100%;
+	height: 174px;
+	float: left;
+	text-decoration: none;
+	font-size: 18px;
+	color: #008AC9;
+}
+
+.imgVoluntario:hover {
+	background-image: url(../img/botones/voluntario_on.png);
+	color: #F66505;
+	transition: .3s;
+}
+
+	.financiero {
+		width: 250px;
+		height: 250px;
+		display:inline-block;
+		margin: 0px 20px;
+	}
+
+		.imgFinanciero {
+	background-image: url(../img/botones/financiero_off.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 100%;
+	height: 174px;
+	float: left;
+	text-decoration: none;
+	font-size: 18px;
+	color: #008AC9;
+}
+
+.imgFinanciero:hover {
+	background-image: url(../img/botones/financiero_on.png);
+	color: #F66505;
+	transition: .3s;
+}
+
+	.presupuesto {
+		width: 250px;
+		height: 250px;
+		display:inline-block;
+		margin: 0px 20px;
+	}
+
+		.imgPresupuesto {
+	background-image: url(../img/botones/presupuesto_off.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 100%;
+	height: 174px;
+	float: left;
+	text-decoration: none;
+	font-size: 18px;
+	color: #008AC9;
+}
+
+.imgPresupuesto:hover {
+	background-image: url(../img/botones/presupuesto_on.png);
+	color: #F66505;
+	transition: .3s;
+}
 
 .imagenUsuario {
 	float: right;
 	height: 50px;
-	width: 40px;
+	width: 50px;
 	border-radius: 50%;
 }
-
 
 .btn-menu-top {
 	width: 170px;
